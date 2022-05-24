@@ -14,8 +14,8 @@ const Banner = () => {
       >
         <div class="hero-content  text-center">
           <div class="max-w-md text-white">
-            <h1 class="text-5xl font-bold mt-10">Hand Tools Power Saw Machine</h1>
-            <button class="btn btn-primary mt-10">Order Now</button>
+            <h1 class="text-5xl text-primary font-bold mt-10">Hand Tools Power Saw Machine</h1>
+            <h4 className="text-2xl my-5">The New Experience</h4>
           </div>
         </div>
       </div>

@@ -1,0 +1,50 @@
+[
+    {
+        "name" : "Jig Saw ",
+        "img" : "https://i.ibb.co/T1WwS5S/tools1.webp",
+        "description" : "Also jig saw . an electric machine saw with a narrow blade mounted vertically in a frame, for cutting curves or other difficult lines or patterns.",
+        "minimum" : "100",
+        "available" : "1000",
+        "price" : "200"
+    },
+    {
+        "name" : "Rotary Tool",
+        "img" : "https://i.ibb.co/PWk53zK/tools2.webp",
+        "description" : "A rotary tool is a powerful, multipurpose tool with a motorized tip. A rotary cutting tool is typically powered by electricity, ",
+        "minimum" : "100",
+        "available" : "1000",
+        "price" : "150"
+    },
+    {
+        "name" : "Drill Driver",
+        "img" : "https://i.ibb.co/bPjZq96/tools3.webp",
+        "description" : "A drill driver is a multipurpose tool which can be used for both drilling at high speeds and driving screws into stubborn materials.",
+        "minimum" : "100",
+        "available" : "1000",
+        "price" : "150"
+    },
+    {
+        "name" : "Marble Cutter",
+        "img" : "https://i.ibb.co/Xt79bvc/tools4.webp",
+        "description" : "Marble cutters are perfect tools for cutting all types of flat stones and marble. These cutters are easy to use and portable. ",
+        "minimum" : "100",
+        "available" : "1000",
+        "price" : "120"
+    },
+    {
+        "name" : "Circular Saw",
+        "img" : "https://i.ibb.co/r0755MP/tools5.webp",
+        "description" : "A circular saw is a power-saw using a toothed or abrasive disc or blade to cut different materials using a rotary motion spinning around an arbor.",
+        "minimum" : "100",
+        "available" : "1000",
+        "price" : "426"
+    },
+    {
+        "name" : "Chop Saw",
+        "img" : "https://i.ibb.co/YRLgN3C/tools6.webp",
+        "description" : "A chop saw is a powerful tabletop tool for heavy-duty cutting tasks. Using an abrasive spinning disc attached to an arm, it can grind its way through meta",
+        "minimum" : "100",
+        "available" : "1000",
+        "price" : "300"
+    }
+]
