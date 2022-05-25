@@ -1,12 +1,15 @@
+
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
 const AddProduct = () => {
   const { register, handleSubmit } = useForm();
+  
+  
 
   const onSubmit = async (data) => {
-    fetch("http://localhost:5000/product", {
+      fetch("http://localhost:5000/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -15,7 +18,9 @@ const AddProduct = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data) {
+          if (data) {
+            console.log(data);
+            
           toast.success("Stock Update Successfully");
         }
       });
@@ -23,7 +28,7 @@ const AddProduct = () => {
   return (
     <div className="container mx-auto">
       <div>
-        <h2 className="my-5 text-center text-3xl text-primary">Add A Product</h2>
+        <h2 className="my-5 text-center text-5xl text-primary">Add A Product</h2>
         <div className="flex my-20 justify-center items-center">
           <div className="card w-96 bg-base-100 shadow-xl">
             <div className="card-body">
@@ -35,7 +40,7 @@ const AddProduct = () => {
                 />
                 <input
                   placeholder="Photo URL"
-                  className="input input-bordered my-3 w-full max-w-xs"
+                  className="input my-3 input-bordered w-full max-w-xs"
                   {...register("img")}
                 />
 

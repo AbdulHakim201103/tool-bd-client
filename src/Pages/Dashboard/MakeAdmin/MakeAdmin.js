@@ -24,8 +24,8 @@ const MakeAdmin = () => {
       }
     return (
         <div>
-      <h2 className="my-5 text-center text-3xl text-secondary">Admin</h2>
-      <div class="overflow-x-auto">
+      <h2 className="my-5 text-center text-5xl  text-primary">Admin</h2>
+      <div class="overflow-x-auto my-10 mx-5">
         <table class="table table-zebra w-full">
           <thead>
             <tr className="text-center text-blue-600">
