@@ -4,6 +4,7 @@ import auth from "../../../firebase.init";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import {  toast } from "react-toastify";
+import useToken from '../../../hooks/useToken';
 
 
 
@@ -27,6 +28,8 @@ const Register = () => {
     handleSubmit,
   } = useForm();
 
+  const [token] = useToken(user ||googleUser)
+
   const navigate = useNavigate();
 
   let loginLoading;
@@ -40,7 +43,7 @@ const Register = () => {
     loginLoading = <button className="btn flex mx-auto my-4 bg-white text-red-500 border-0 loading">loading</button>
   }
 
-  if (user ||googleUser) {
+  if (token) {
     navigate('/home')
   }
 

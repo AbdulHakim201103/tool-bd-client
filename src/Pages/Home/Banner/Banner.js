@@ -5,16 +5,16 @@ const Banner = () => {
   return (
     <div className="container mx-auto">
       <div
-        class="hero min-h-screen "
+        className="hero min-h-screen "
         style={{
           background: `url(${banner1})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
         }}
       >
-        <div class="hero-content  text-center">
-          <div class="max-w-md text-white">
-            <h1 class="text-5xl text-primary font-bold mt-10">Hand Tools Power Saw Machine</h1>
+        <div className="hero-content  text-center">
+          <div className="max-w-md text-white">
+            <h1 className="text-5xl text-primary font-bold mt-10">Hand Tools Power Saw Machine</h1>
             <h4 className="text-2xl my-5">The New Experience</h4>
           </div>
         </div>

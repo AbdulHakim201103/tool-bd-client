@@ -9,6 +9,7 @@ import auth from "../../../firebase.init";
 import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import useToken from "../../../hooks/useToken";
 
 const Login = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -24,6 +25,8 @@ const Login = () => {
   } = useForm();
 
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+  
+  const [token] = useToken(user || googleUser)
 
   const navigate = useNavigate();
 
@@ -47,7 +50,7 @@ const Login = () => {
     );
   }
 
-  if (user || googleUser) {
+  if (token) {
     navigate(from, { replace: true });
   }
 

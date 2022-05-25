@@ -1,10 +1,9 @@
 import React from "react";
-
-
+import { Link } from "react-router-dom";
 
 const toolCard = ({ tool }) => {
   const { _id, name, description, img, price, minimum, available } = tool;
- 
+  
   return (
     <div className="card lg:max-w-lg bg-base-100 shadow-xl">
       <div className="card-body">
@@ -19,9 +18,7 @@ const toolCard = ({ tool }) => {
           <h4 className="text-2xl text-secondary">Price: ${price}</h4>
         </div>
         <div className="mx-auto">
-          <button  class="btn btn-primary mt-10">
-            Order Now
-          </button>
+          <Link className="btn btn-primary mt-10" to={`/purchase/${_id}`}>Order Now</Link>
         </div>
       </div>
     </div>
