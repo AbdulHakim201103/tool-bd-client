@@ -1,18 +1,18 @@
-import { signOut } from '@firebase/auth';
-import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
-import auth from '../../firebase.init';
+import { signOut } from "@firebase/auth";
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
 
   const logOut = () => {
     signOut(auth);
-    localStorage.removeItem('accessToken');
+    localStorage.removeItem("accessToken");
   };
-    return (
-        <div className="navbar container z-50 mx-auto sticky bg-teal-200 top-0 ">
+  return (
+    <div className="navbar container z-50 mx-auto sticky bg-teal-200 top-0 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost  lg:hidden">
@@ -59,32 +59,46 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-3xl">
-          <span className="text-red-700">Tools</span><span className="text-green-700">BD</span>
+          <span className="text-red-700">Tools</span>
+          <span className="text-green-700">BD</span>
         </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-        <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/blogs">Blogs</Link>
-            </li>
-            <li>
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
-            <li>
-              {user ? (
-                <button onClick={logOut} className="btn btn-active text-red-700 btn-ghost">
-                  Sign Out
-                </button>
-              ) : (
-                <Link to="/login">Login</Link>
-              )}
-            </li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/blogs">Blogs</Link>
+          </li>
+          <li>
+            <Link to="/portfolio">Portfolio</Link>
+          </li>
+          <li>
+            {user ? (
+              <button onClick={logOut} className="btn btn-active text-red-700 btn-ghost">
+                Sign Out
+              </button>
+            ) : (
+              <Link to="/login">Login</Link>
+            )}
+          </li>
+          {/* <li>
+            {user ? 
+              <div class="avatar">
+              <div class="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src={user?.photoURL} alt="" />
+              </div>
+            </div>
+            :
+            <div>
+              <h1>{user.displayName}</h1>
+            </div>
+            }
+          </li> */}
         </ul>
       </div>
       <div className="navbar-end">
@@ -106,7 +120,7 @@ const Navbar = () => {
         </label>
       </div>
     </div>
-    );
+  );
 };
 
 export default Navbar;

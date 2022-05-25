@@ -32,7 +32,6 @@ const MakeAdmin = () => {
               <th>No</th>
               <th>Email</th>
               <th>Admin</th>
-              <th>Remove User</th>
             </tr>
           </thead>
           <tbody>
