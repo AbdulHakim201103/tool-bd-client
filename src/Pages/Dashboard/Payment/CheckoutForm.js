@@ -5,9 +5,10 @@ const CheckoutForm = ({ order }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState("");
+  const [success, setSuccess] = useState("");
   const [clientSecret, setClientSecret] = useState("");
 
-  const { price } = order;
+  const { price, customerEmail, customerName } = order;
 
   useEffect(() => {
     fetch("http://localhost:5000/create-payment-intent", {
@@ -26,6 +27,8 @@ const CheckoutForm = ({ order }) => {
       });
   }, [price]);
 
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!stripe || !elements) {
@@ -43,6 +46,30 @@ const CheckoutForm = ({ order }) => {
     });
 
     setCardError(error?.message || "");
+    setSuccess('')
+
+    const {paymentIntent, error: intentError} = await stripe.confirmCardPayment(
+      clientSecret,
+      {
+        payment_method: {
+          card: card,
+          billing_details: {
+            name: customerName,
+            email: customerEmail,
+          },
+        },
+      },
+    );
+
+    if (intentError) {
+      setCardError(intentError.message);
+      
+    }
+    else{
+      setCardError('');
+      console.log(paymentIntent);
+      setSuccess('Your Payment is Completed')
+    }
   };
 
   return (
@@ -73,6 +100,7 @@ const CheckoutForm = ({ order }) => {
         </button>
       </form>
       {cardError && <p className="text-red-700">{cardError}</p>}
+      {success && <p className="text-green-700">{success}</p>}
     </>
   );
 };
