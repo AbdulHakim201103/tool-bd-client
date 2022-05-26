@@ -13,7 +13,11 @@ const Purchase = () => {
 
   useEffect(() => {
     const url = `http://localhost:5000/tools/${id}`;
-    fetch(url)
+    fetch(url,{
+      headers:{
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`
+      }
+    })
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, [id]);
@@ -43,6 +47,8 @@ const Purchase = () => {
                 <input
                   type="number"
                   name="quantity"
+                  max={available}
+                  min={minimum}
                   placeholder="Order Quantity"
                   className="input border-solid border-green-700"
                 />
@@ -52,11 +58,11 @@ const Purchase = () => {
                 <label for="order-modal" className="btn modal-button">
                   Order Now
                 </label>
-              ) : (
+              ) :(
                 <label disabled for="order-modal" className="btn modal-button">
                   Order Now
                 </label>
-              )}
+              ) }
               {details && (
                 <PurchaseModal
                   purchaseQuantity={purchaseQuantity}

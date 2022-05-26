@@ -19,6 +19,7 @@ import AddReview from "./Pages/Dashboard/AddReview/AddReview";
 import ManageOrders from "./Pages/Dashboard/ManageOrders/ManageOrders";
 import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
 import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
+import Payment from "./Pages/Dashboard/Payment/Payment";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           }>
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='myOrder' element={<MyOrders></MyOrders>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
           <Route path='manageOrders' element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
