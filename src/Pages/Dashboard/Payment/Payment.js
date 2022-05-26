@@ -24,21 +24,19 @@ const Payment = () => {
   return (
     <div className="container mx-auto">
       <h2 className="my-5 text-center text-5xl text-primary">Payment</h2>
-      <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="card w-96 bg-base-100 shadow-xl">
-            <div class="card-body">
-              <h2 class="card-title">{order?.productName}</h2>
-              
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
-          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <div class="card-body"></div>
-          </div>
+
+      <div class="card w-50 my-10 mx-w-md bg-base-100 shadow-xl">
+        <div class="card-body mx-auto">
+          <h2 class="text-4xl text-primary text-center">{order?.productName}</h2>
+          <p className="text-2xl text-green-500 text-center">{order.customerName}</p>
+          <p className="text-xl text-center">Email: {order.customerEmail}</p>
+          <p className="text-xl text-center">Phone: {order.phone}</p>
+          <p className="text-xl text-center">Quantity: {order.purchaseQuantity}</p>
+          <p className="text-xl text-center">Price: {order.price}</p>
         </div>
+      </div>
+      <div class="card flex-shrink-0 w-50 mx-w-md shadow-2xl bg-base-100">
+        <div class="card-body"></div>
       </div>
     </div>
   );
