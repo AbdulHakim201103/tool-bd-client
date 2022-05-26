@@ -88,8 +88,8 @@ const Navbar = () => {
           </li>
           {/* <li>
             {user ? 
-              <div class="avatar">
-              <div class="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+              <div className="avatar">
+              <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                 <img src={user?.photoURL} alt="" />
               </div>
             </div>

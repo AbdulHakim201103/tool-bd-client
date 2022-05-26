@@ -8,7 +8,7 @@ const toolCard = ({ tool }) => {
     <div className="card lg:max-w-lg bg-base-100 shadow-xl">
       <div className="card-body">
         <div>
-          <img className="w-screen" src={img} alt="" srcset="" />
+          <img className="w-screen" src={img} alt="" srcSet="" />
         </div>
         <div>
           <h2 className="text-4xl  text-primary mx-auto py-3">{name}</h2>

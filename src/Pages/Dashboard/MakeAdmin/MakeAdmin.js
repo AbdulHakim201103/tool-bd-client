@@ -1,32 +1,32 @@
-import React from 'react';
-import { useQuery } from 'react-query';
-import AdminRow from './AdminRow';
+import React from "react";
+import { useQuery } from "react-query";
+import AdminRow from "./AdminRow";
 
 const MakeAdmin = () => {
-    const {
-        data: users,
-        isLoading,
-        refetch,
-      } = useQuery("/users", () =>
-        fetch("http://localhost:5000/user", {
-          method: "GET",
-          headers: {
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-          },
-        }).then((res) => res.json())
-      );
-      if (isLoading) {
-        return (
-          <button className="btn flex mx-auto my-4 bg-white text-red-500 border-0 loading">
-            loading
-          </button>
-        );
-      }
+  const {
+    data: users,
+    isLoading,
+    refetch,
+  } = useQuery("/users", () =>
+    fetch("http://localhost:5000/user", {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    }).then((res) => res.json())
+  );
+  if (isLoading) {
     return (
-        <div>
+      <button className="btn flex mx-auto my-4 bg-white text-red-500 border-0 loading">
+        loading
+      </button>
+    );
+  }
+  return (
+    <div>
       <h2 className="my-5 text-center text-5xl  text-primary">Admin</h2>
-      <div class="overflow-x-auto my-10 mx-5">
-        <table class="table table-zebra w-full">
+      <div className="overflow-x-auto my-10 mx-5">
+        <table className="table table-zebra w-full">
           <thead>
             <tr className="text-center text-blue-600">
               <th>No</th>
@@ -42,7 +42,7 @@ const MakeAdmin = () => {
         </table>
       </div>
     </div>
-    );
+  );
 };
 
 export default MakeAdmin;
