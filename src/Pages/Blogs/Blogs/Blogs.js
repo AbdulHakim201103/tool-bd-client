@@ -11,9 +11,9 @@ const Blogs = () => {
           <div className=" p-5">
             <p>
               যেখানে প্রয়োজন সেখানে Component State Local  রাখা। Unnecessary Re-renders. প্রতিরোধ
-              করার জন্য React Components Memoizing করা। গতিশীল আমদানি () ব্যবহার করে
+              করার জন্য React Components Memoizing করা। গতিশীল Import ব্যবহার করে
               React Code-splitting React import করা বা তালিকা Dynamic করা।
-              Lazy loading images in React.।
+              Lazy loading images in React.
             </p>
           </div>
         </div>

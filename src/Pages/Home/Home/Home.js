@@ -4,6 +4,8 @@ import BusinessSummary from '../BusinessSummary/BusinessSummary';
 import Tools from '../Tools/Tools';
 import Footer from '../../Home/Footer/Footer';
 import Reviews from '../Reviews/Reviews';
+import About from '../About/About';
+import Extar from '../Extar/Extar';
 
 const Home = () => {
     return (
@@ -12,6 +14,8 @@ const Home = () => {
             <Tools></Tools>
             <BusinessSummary></BusinessSummary>
             <Reviews></Reviews>
+            <About></About>
+            <Extar></Extar>
             <Footer></Footer>
         </div>
     );

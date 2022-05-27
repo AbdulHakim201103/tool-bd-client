@@ -92,6 +92,21 @@ const Portfolio = () => {
               <br />
               <span className="text-xl text-blue-600">MongoDB,</span>
             </div>
+            <br />
+            <p className="text-3xl my-4 text-primary">My Projects:</p>
+            <div>
+              <span>
+                <span className="text-xl text-blue-600">Hero Gym and Fitness:</span> https://hero-gym-and-fitness.web.app
+              </span>
+              <br />
+              <span>
+                <span className="text-xl text-blue-600">Comfort Shoes:</span>https://comfort-shoes-a8089.web.app
+              </span>
+              <br />
+              <span>
+                <span className="text-xl text-blue-600">Facebook:</span> www.facebook.com/ahmleon551
+              </span>
+            </div>
           </div>
         </div>
       </div>
