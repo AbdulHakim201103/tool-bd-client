@@ -1,11 +1,51 @@
-import React from 'react';
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
+import auth from "../../../../firebase.init";
 
 const MyProfile = () => {
+  const [user] = useAuthState(auth);
+
+  const { data: users, isLoading } = useQuery("users", () =>
+    fetch("http://localhost:5000/user", {
+      method: "GET",
+      headers: {
+        email: user?.email,
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    }).then((res) => res.json())
+  );
+
+  if (isLoading) {
     return (
-        <div className="container mx-auto">
-            <h2 className="my-5 text-center text-5xl text-primary">My Profile</h2>
-        </div>
+      <button className="btn flex mx-auto my-4 bg-white text-red-500 border-0 loading">
+        loading
+      </button>
     );
+  }
+  return (
+    <div className="container mx-auto h-screen py-20 bg-red-200">
+      <div class="avatar mb-[-80px] my-5 flex justify-center items-center">
+        <div class="w-44 rounded-full ring bg-primary">
+          <img src={user?.photoURL} alt="" />
+        </div>
+      </div>
+      <div className=" bg-gray-700 flex justify-center py-44 h-screen p-10 rounded">
+        <div className="">
+          <div className=" text-center text-white">
+            <p className="text-5xl my-5">{user?.displayName}</p>
+            <p className="text-3xl my-5">{user?.email}</p>
+            <p className="text-3xl my-5">{users?.phone}</p>
+            <p className="text-3xl my-5">{users?.address}</p>
+          </div>
+          <div className=" text-2xl text-primary  text-center  ">
+            <Link to=" btn btn-sm">Edit</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default MyProfile;

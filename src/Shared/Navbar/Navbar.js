@@ -86,19 +86,7 @@ const Navbar = () => {
               <Link to="/login">Login</Link>
             )}
           </li>
-          {/* <li>
-            {user ? 
-              <div className="avatar">
-              <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src={user?.photoURL} alt="" />
-              </div>
-            </div>
-            :
-            <div>
-              <h1>{user.displayName}</h1>
-            </div>
-            }
-          </li> */}
+          
         </ul>
       </div>
       <div className="navbar-end">
