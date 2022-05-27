@@ -13,10 +13,10 @@ const Purchase = () => {
 
   useEffect(() => {
     const url = `http://localhost:5000/tools/${id}`;
-    fetch(url,{
-      headers:{
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`
-      }
+    fetch(url, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
     })
       .then((res) => res.json())
       .then((data) => setDetails(data));
@@ -55,14 +55,14 @@ const Purchase = () => {
                 <input type="submit" value="add" className="btn mx-2.5" />
               </form>
               {purchaseQuantity >= minimum && purchaseQuantity <= available ? (
-                <label for="order-modal" className="btn modal-button">
+                <label htmlFor="order-modal" className="btn modal-button">
                   Order Now
                 </label>
-              ) :(
-                <label disabled for="order-modal" className="btn modal-button">
+              ) : (
+                <label disabled htmlFor="order-modal" className="btn modal-button">
                   Order Now
                 </label>
-              ) }
+              )}
               {details && (
                 <PurchaseModal
                   purchaseQuantity={purchaseQuantity}

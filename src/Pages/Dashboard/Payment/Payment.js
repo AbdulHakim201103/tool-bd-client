@@ -32,9 +32,9 @@ const Payment = () => {
     <div className="container mx-auto">
       <h2 className="my-5 text-center text-5xl text-primary">Payment</h2>
 
-      <div class="card w-50 my-10 mx-w-md bg-base-100 shadow-xl">
-        <div class="card-body mx-auto">
-          <h2 class="text-4xl text-primary text-center">{order?.productName}</h2>
+      <div className="card w-50 my-10 mx-w-md bg-base-100 shadow-xl">
+        <div className="card-body mx-auto">
+          <h2 className="text-4xl text-primary text-center">{order?.productName}</h2>
           <p className="text-2xl text-green-500 text-center">{order.customerName}</p>
           <p className="text-xl text-center">Email: {order.customerEmail}</p>
           <p className="text-xl text-center">Phone: {order.phone}</p>
@@ -42,8 +42,8 @@ const Payment = () => {
           <p className="text-xl text-center">Price: {order.price}</p>
         </div>
       </div>
-      <div class="card flex-shrink-0 w-50 mx-w-md shadow-2xl bg-base-100">
-        <div class="card-body">
+      <div className="card flex-shrink-0 w-50 mx-w-md shadow-2xl bg-base-100">
+        <div className="card-body">
           <Elements stripe={stripePromise}>
             <CheckoutForm order={order} />
           </Elements>

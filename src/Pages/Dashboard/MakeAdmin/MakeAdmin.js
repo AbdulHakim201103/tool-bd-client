@@ -6,9 +6,9 @@ const MakeAdmin = () => {
   const {
     data: users,
     isLoading,
-    refetch,
+    refetch
   } = useQuery("/users", () =>
-    fetch("http://localhost:5000/user", {
+    fetch("http://localhost:5000/alluser", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -35,9 +35,9 @@ const MakeAdmin = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => (
-              <AdminRow key={user._id} index={index} user={user} refetch={refetch}></AdminRow>
-            ))}
+            {
+              users && users.map((user, index) => (<AdminRow key={user._id} index={index} user={user} refetch={refetch}></AdminRow>))
+            }
           </tbody>
         </table>
       </div>

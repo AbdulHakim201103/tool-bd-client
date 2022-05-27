@@ -25,22 +25,25 @@ const MyProfile = () => {
     );
   }
   return (
-    <div className="container mx-auto h-screen py-20 bg-red-200">
-      <div class="avatar mb-[-80px] my-5 flex justify-center items-center">
-        <div class="w-44 rounded-full ring bg-primary">
-          <img src={user?.photoURL} alt="" />
+    <div className="container mx-auto h-screen py-20  bg-orange-300">
+      <div className="avatar mb-[-80px] my-5 flex justify-center items-center">
+        <div className="w-44 rounded-full bg-white ring ring-primary">
+          <img className="" src={user?.photoURL} alt="" />
         </div>
       </div>
-      <div className=" bg-gray-700 flex justify-center py-44 h-screen p-10 rounded">
+      <div className=" bg-gray-700 flex justify-center py-44 h-screen p-10 ">
         <div className="">
           <div className=" text-center text-white">
-            <p className="text-5xl my-5">{user?.displayName}</p>
+            <p className="text-5xl my-5 text-primary">{user?.displayName}</p>
             <p className="text-3xl my-5">{user?.email}</p>
+            <p className="text-3xl my-5">{users?.education}</p>
             <p className="text-3xl my-5">{users?.phone}</p>
             <p className="text-3xl my-5">{users?.address}</p>
           </div>
-          <div className=" text-2xl text-primary  text-center  ">
-            <Link to=" btn btn-sm">Edit</Link>
+          <div className=" text-2xl  text-center ">
+            <Link to="/updateProfile" className="btn btn-primary btn-sm">
+              Edit
+            </Link>
           </div>
         </div>
       </div>

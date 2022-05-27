@@ -138,7 +138,7 @@ const Register = () => {
             </div>
             {loginError}
             {loginLoading}
-            <input className="btn w-full max-w-xs" type="submit" value="Login"/>
+            <input className="btn w-full max-w-xs" type="submit" value="Register"/>
             <div className="flex justify-center items-center my-4">
               <small>Already have an Account? <Link className="text-primary" to="/login">Please Login</Link> </small>
             </div>
