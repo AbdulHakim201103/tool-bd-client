@@ -39,7 +39,7 @@ const MyOrders = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          toast("Stock Delete Successfully");
+          toast("Delete Successfully");
           const remaining = orders.filter((order) => order._id !== id);
           setOrders(remaining);
         }
