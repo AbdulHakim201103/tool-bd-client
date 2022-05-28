@@ -18,7 +18,7 @@ const PurchaseModal = ({ details, purchaseQuantity }) => {
       phone: event.target.phone.value,
     };
 
-    const url = "http://localhost:5000/orders";
+    const url = "https://rocky-waters-62906.herokuapp.com/orders";
     fetch(url, {
       method: "POST",
       headers: {

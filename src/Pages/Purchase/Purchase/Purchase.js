@@ -12,7 +12,7 @@ const Purchase = () => {
   const purchaseQuantity = parseInt(purchase);
 
   useEffect(() => {
-    const url = `http://localhost:5000/tools/${id}`;
+    const url = `https://rocky-waters-62906.herokuapp.com/tools/${id}`;
     fetch(url, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -9,7 +9,7 @@ const ManageOrders = () => {
   const [deleteOrder, setDeleteOrder] = useState(0);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allorder`, {
+    fetch(`https://rocky-waters-62906.herokuapp.com/allorder`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -22,7 +22,7 @@ const ManageOrders = () => {
   }, [user]);
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://rocky-waters-62906.herokuapp.com/orders/${id}`;
     fetch(url, {
       method: "DELETE",
     })
@@ -37,7 +37,7 @@ const ManageOrders = () => {
   };
 
   const handlePendingOrder = (id) => {
-    const url = `http://localhost:5000/ordersDeliver/${id}`;
+    const url = `https://rocky-waters-62906.herokuapp.com/ordersDeliver/${id}`;
     fetch(url, {
       method: "PATCH",
       headers: {

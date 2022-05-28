@@ -5,7 +5,7 @@ const ManageProducts = () => {
   const [tools, setTools] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/tools")
+    fetch("https://rocky-waters-62906.herokuapp.com/tools")
       .then((res) => res.json())
       .then((data) => setTools(data));
   }, []);
@@ -13,7 +13,7 @@ const ManageProducts = () => {
   const handleDelete = (id) => {
     const confirm = window.confirm("Are you Sure?");
     if (confirm) {
-      const url = `http://localhost:5000/tools/${id}`;
+      const url = `https://rocky-waters-62906.herokuapp.com/tools/${id}`;
       fetch(url, {
         method: "DELETE",
       })

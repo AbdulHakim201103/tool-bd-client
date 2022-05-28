@@ -15,23 +15,22 @@ const UpdatedProfile = () => {
       social: event.target.social.value,
     };
 
-    fetch(`http://localhost:5000/user/${user?.email}`, {
+    fetch(`https://rocky-waters-62906.herokuapp.com/user/${user?.email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
-      body: JSON.stringify(updatedInfo)
+      body: JSON.stringify(updatedInfo),
     })
-    .then(res => res.json())
-    .then(data =>{
+      .then((res) => res.json())
+      .then((data) => {
         if (data) {
-            toast.success("Profile Update Successfully")
+          toast.success("Profile Update Successfully");
+        } else {
+          toast.error("profile Update Failed");
         }
-        else{
-            toast.error("profile Update Failed")
-        }
-    })
+      });
   };
   return (
     <div className="container mx-auto flex justify-center my-24 h-screen">

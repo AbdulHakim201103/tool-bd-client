@@ -1,15 +1,12 @@
-
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
 const AddProduct = () => {
   const { register, handleSubmit } = useForm();
-  
-  
 
   const onSubmit = async (data) => {
-      fetch("http://localhost:5000/product", {
+    fetch("https://rocky-waters-62906.herokuapp.com/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -18,9 +15,9 @@ const AddProduct = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-          if (data) {
-            console.log(data);
-            
+        if (data) {
+          console.log(data);
+
           toast.success("Stock Update Successfully");
         }
       });

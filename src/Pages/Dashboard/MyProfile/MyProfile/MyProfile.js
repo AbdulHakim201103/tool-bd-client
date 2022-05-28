@@ -8,7 +8,7 @@ const MyProfile = () => {
   const [user] = useAuthState(auth);
 
   const { data: users, isLoading } = useQuery("users", () =>
-    fetch("http://localhost:5000/user", {
+    fetch("https://rocky-waters-62906.herokuapp.com/user", {
       method: "GET",
       headers: {
         email: user?.email,

@@ -12,7 +12,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/orders?customerEmail=${user.email}`, {
+      fetch(`https://rocky-waters-62906.herokuapp.com/orders?customerEmail=${user.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -33,7 +33,7 @@ const MyOrders = () => {
   }, [user]);
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://rocky-waters-62906.herokuapp.com/orders/${id}`;
     fetch(url, {
       method: "DELETE",
     })
