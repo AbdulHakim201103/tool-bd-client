@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# This is ToolsBD Shoes Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website Live Link:().
 
-## Available Scripts
+# This is ToolsBD Sarver Site
 
-In the project directory, you can run:
+Website Sarver Code Link:().
 
-### `npm start`
+## Website Summary Bullet Point:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Header তৈরি করা হয়েছে।
+* Home Page তৈরি করা হয়েছে।
+* Purchase Page তৈরি করা হয়েছে।
+* Portfolio Page তৈরি করা হয়েছে।
+* Dashboard তৈরি করা হয়েছে।
+* Profile তৈরি করা হয়েছে।
+* Admin তৈরি করা হয়েছে।
+* Manage Order তৈরি করা হয়েছে।
+* Add Product তৈরি করা হয়েছে।
+* My Order তৈরি করা হয়েছে।
+* Add Review তৈরি করা হয়েছে।
+* My Items Page তৈরি করা হয়েছে।
+* Blog Page তৈরি করা হয়েছে।
+* Login Page তৈরি করা হয়েছে।
+* Register Page তৈরি করা হয়েছে।
+* RequireAuth ব্যবহার করা হয়েছে।
+* RequireAdmin ব্যবহার করা হয়েছে।
+* Authentication করা হয়েছে।
+* JWT করা হয়েছে।
+* Payment Mathod দেখানো হয়েছে।
+* React-hook-form দেখানো হয়েছে।
+* Toast দেখানো হয়েছে।
+* Stripe দেখানো হয়েছে।
+* Error দেখানো হয়েছে।
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Website যা যা ব্যবহার করা হয়েছে:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Firebase ব্যবহার করা হয়েছে।
+* React Tailwind css ব্যবহার করা হয়েছে।
+* DaisyUI ব্যবহার করা হয়েছে।
+* React Form ব্যবহার করা হয়েছে।
+* React Toast ব্যবহার করা হয়েছে।
+* React Route ব্যবহার করা হয়েছে ।
+* Heroku ব্যবহার করা হয়েছে ।
+* NodeJS ব্যবহার করা হয়েছে ।
+* MongoDB ব্যবহার করা হয়েছে ।

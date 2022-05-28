@@ -7,6 +7,7 @@ import { signOut } from "@firebase/auth";
 const MyOrders = () => {
   const [user] = useAuthState(auth);
   const [orders, setOrders] = useState([]);
+  const [deleteOrder, setDeleteOrder] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -68,21 +69,56 @@ const MyOrders = () => {
                 <td>{order.purchaseQuantity}</td>
                 <td>{order.price}</td>
                 <td>
-                  {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className="btn btn-xs border-0 bg-blue-700">Pay</button></Link>}
-                  {(order.price && order.paid) && <span className=" text-bold text-green-500 text-xl">Paid</span>}
+                  {order.price && !order.paid && (
+                    <Link to={`/dashboard/payment/${order._id}`}>
+                      <button className="btn btn-xs border-0 bg-blue-700">Pay</button>
+                    </Link>
+                  )}
+                  {order.price && order.paid && (
+                    <span className=" text-bold text-green-500 text-xl">Paid</span>
+                  )}
                 </td>
                 <td>
-                  <button
-                    onClick={() => handleDelete(order._id)}
-                    className="btn btn-xs border-0  bg-red-700"
-                  >
-                    Delete
-                  </button>
+                  {order.price && !order.paid && (
+                    <label
+                      htmlFor="confirm-delete-orders"
+                      className="btn btn-error btn-sm modal-button"
+                      onClick={() => setDeleteOrder(order._id)}
+                    >
+                      Delete
+                    </label>
+                  )}
+                  {order.price && order.paid && (
+                    <span className=" text-bold text-green-500 text-xl">Shipping</span>
+                  )}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+        <input type="checkbox" id="confirm-delete-orders" className="modal-toggle" />
+        <div className="modal">
+          <div className="modal-box">
+            <h3>Alert ...</h3>
+            <p>Are you sure you want to delete?</p>
+            <div className="flex justify-end">
+              <div className="modal-action">
+                <label htmlFor="confirm-delete-orders" className="btn btn-sm">
+                  Cancel
+                </label>
+              </div>
+              <div className="modal-action ml-2">
+                <label
+                  onClick={() => handleDelete(deleteOrder)}
+                  htmlFor="confirm-delete-orders"
+                  className="btn btn-sm"
+                >
+                  Confirm
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

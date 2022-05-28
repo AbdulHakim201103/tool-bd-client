@@ -39,6 +39,7 @@ const MyProfile = () => {
             <p className="text-3xl my-5">{users?.education}</p>
             <p className="text-3xl my-5">{users?.phone}</p>
             <p className="text-3xl my-5">{users?.address}</p>
+            <p className="text-3xl my-5">{users?.social}</p>
           </div>
           <div className=" text-2xl  text-center ">
             <Link to="/updateProfile" className="btn btn-primary btn-sm">

@@ -12,7 +12,7 @@ const UpdatedProfile = () => {
       education: event.target.education.value,
       phone: event.target.phone.value,
       address: event.target.address.value,
-      social: event.target.education.value,
+      social: event.target.social.value,
     };
 
     fetch(`http://localhost:5000/user/${user?.email}`, {

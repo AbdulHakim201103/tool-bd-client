@@ -89,21 +89,23 @@ const ManageOrders = () => {
                 <td>{order.price}</td>
                 <td>
                   {order.price && !order.paid && (
-                    <Link to={`/dashboard/payment/${order._id}`}><button className="btn btn-xs border-0 bg-blue-700">Pay</button></Link>
+                    <Link to={`/dashboard/payment/${order._id}`}>
+                      <button className="btn btn-xs border-0 bg-blue-700">Unpaid</button>
+                    </Link>
                   )}
                   {order.price &&
                     order.paid &&
                     (order.deliver ? (
                       <span className=" text-bold text-green-500 text-xl">Paid</span>
                     ) : (
-                      <span className=" text-bold text-green-500 text-xl">Shipped</span>
+                      <span className=" text-bold text-green-500 text-xl">Pending</span>
                     ))}
                 </td>
                 <td>
                   {order.price && !order.paid && (
                     <label
                       htmlFor="confirm-delete-orders"
-                      className="btn btn-error btn-sm modal-button"
+                      className="btn btn-error btn-xs modal-button"
                       onClick={() => setDeleteOrder(order._id)}
                     >
                       Delete
@@ -118,7 +120,7 @@ const ManageOrders = () => {
                         Shipped
                       </button>
                     ) : (
-                      <span className=" text-bold text-green-500 text-xl">Pending</span>
+                      <span className=" text-bold text-green-500 text-xl">Shipped</span>
                     ))}
                 </td>
               </tr>
