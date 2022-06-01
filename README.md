@@ -4,11 +4,11 @@ Website Live Link:(https://tools-bd-d0c6a.web.app).
 
 # This is ToolsBD Sarver Site
 
-Website Client Code Link:(https://github.com/programming-hero-web-course1/manufacturer-website-client-side-AbdulHakim201103).
+Website Client Code Link:(https://github.com/AbdulHakim201103/tool-bd-client).
 
 # This is ToolsBD Sarver Site
 
-Website Sarver Code Link:(https://github.com/programming-hero-web-course1/manufacturer-website-server-side-AbdulHakim201103).
+Website Server Code Link:(https://github.com/AbdulHakim201103/tools-bd-server).
 
 ## Website Summary Bullet Point:
 
