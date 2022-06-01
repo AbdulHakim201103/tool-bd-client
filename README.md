@@ -1,12 +1,12 @@
-# This is ToolsBD Shoes Project
+# This is ToolsBD  Project
 
 Website Live Link:(https://tools-bd-d0c6a.web.app).
 
-# This is ToolsBD Sarver Site
+# This is ToolsBD Client Site
 
 Website Client Code Link:(https://github.com/AbdulHakim201103/tool-bd-client).
 
-# This is ToolsBD Sarver Site
+# This is ToolsBD Server Site
 
 Website Server Code Link:(https://github.com/AbdulHakim201103/tools-bd-server).
 
